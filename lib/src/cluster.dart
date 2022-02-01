@@ -26,6 +26,23 @@ class Cluster<T extends ClusterItem> {
         "_$count";
   }
 
+  String? _course;
+  set course(String value) {
+    _course = value;
+  }
+  String get course => _course!;
+
+  String? _icon;
+  set icon(String value) {
+    _icon = value;
+  }
+  String get icon => _icon!;
+
+  String? _rotation;
+  set rotation(String value) {
+    _rotation = value;
+  }
+
   @override
   String toString() {
     return 'Cluster of $count $T (${location.latitude}, ${location.longitude})';
