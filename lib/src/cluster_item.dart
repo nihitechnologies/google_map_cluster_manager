@@ -7,4 +7,22 @@ abstract class ClusterItem {
   String? _geohash;
   String get geohash => _geohash ??=
       Geohash.encode(location, codeLength: ClusterManager.precision);
+
+  String? _course;
+  set course(String value) {
+    _course = value;
+  }
+  String get course => _course!;
+
+  String? _icon;
+  set icon(String value) {
+    _icon = value;
+  }
+  String get icon => _icon!;
+
+  String? _rotation;
+  set rotation(String value) {
+    _rotation = value;
+  }
+  String get rotation => _rotation!;
 }
