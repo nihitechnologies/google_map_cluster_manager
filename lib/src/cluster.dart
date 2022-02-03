@@ -27,13 +27,13 @@ class Cluster<T extends ClusterItem> {
   }
 
   //String? _course;
-  String? get course => items.fold<String>("0", (p, c) => p + c.course);
+  String? get course => items.fold<String>("", (p, c) => p + c.course);
 
   //String? _icon;
-  String get icon => items.fold<String>("0", (p, c) => p + c.icon);
+  String get icon => items.fold<String>("", (p, c) => p + c.icon);
 
   //String? _rotation;
-  String get rotation => items.fold<String>("0", (p, c) => p + c.rotation);
+  String get rotation => items.fold<String>("", (p, c) => p + c.rotation);
 
 
   @override
