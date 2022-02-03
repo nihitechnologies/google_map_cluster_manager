@@ -3,6 +3,9 @@ import 'package:google_maps_flutter_platform_interface/google_maps_flutter_platf
 
 abstract class ClusterItem {
   LatLng get location;
+  String get course;
+  String get icon;
+  String get rotation;
 
   String? _geohash;
   String get geohash => _geohash ??=

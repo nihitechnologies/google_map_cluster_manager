@@ -45,30 +45,30 @@ class MapSampleState extends State<MapSample> {
       Place(
           name: 'Restaurant $i',
           isClosed: i % 2 == 0,
-          latLng: LatLng(48.858265 - i * 0.001, 2.350107 + i * 0.001)),
+          latLng: LatLng(48.858265 - i * 0.001, 2.350107 + i * 0.001),isRotating: '', iconPath: '', courseVal: ''),
     for (int i = 0; i < 10; i++)
       Place(
           name: 'Bar $i',
-          latLng: LatLng(48.858265 + i * 0.01, 2.350107 - i * 0.01)),
+          latLng: LatLng(48.858265 + i * 0.01, 2.350107 - i * 0.01),isRotating: '', iconPath: '', courseVal: ''),
     for (int i = 0; i < 10; i++)
       Place(
           name: 'Hotel $i',
-          latLng: LatLng(48.858265 - i * 0.1, 2.350107 - i * 0.01)),
+          latLng: LatLng(48.858265 - i * 0.1, 2.350107 - i * 0.01),isRotating: '', iconPath: '', courseVal: ''),
   ];
 
   List<Place> items2 = [
     for (int i = 0; i < 10; i++)
       Place(
           name: 'Place $i',
-          latLng: LatLng(48.848200 + i * 0.001, 2.319124 + i * 0.001)),
+          latLng: LatLng(48.848200 + i * 0.001, 2.319124 + i * 0.001),isRotating: '', iconPath: '', courseVal: ''),
     for (int i = 0; i < 10; i++)
       Place(
           name: 'Test $i',
-          latLng: LatLng(48.858265 + i * 0.1, 2.350107 + i * 0.1)),
+          latLng: LatLng(48.858265 + i * 0.1, 2.350107 + i * 0.1),isRotating: '', iconPath: '', courseVal: ''),
     for (int i = 0; i < 10; i++)
       Place(
           name: 'Test2 $i',
-          latLng: LatLng(48.858265 + i * 1, 2.350107 + i * 1)),
+          latLng: LatLng(48.858265 + i * 1, 2.350107 + i * 1),isRotating: '', iconPath: '', courseVal: ''),
   ];
 
   @override
@@ -120,7 +120,7 @@ class MapSampleState extends State<MapSample> {
             for (int i = 0; i < 30; i++)
               Place(
                   name: 'New Place ${DateTime.now()} $i',
-                  latLng: LatLng(48.858265 + i * 0.01, 2.350107))
+                  latLng: LatLng(48.858265 + i * 0.01, 2.350107),isRotating: '', iconPath: '', courseVal: ''),
           ]);
         },
         child: Icon(Icons.update),
@@ -130,6 +130,7 @@ class MapSampleState extends State<MapSample> {
 
   Future<Marker> Function(Cluster<Place>) _getMarkerBuilder(Color color) =>
       (cluster) async {
+
         return Marker(
           markerId: MarkerId(cluster.getId()),
           position: cluster.location,

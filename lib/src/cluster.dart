@@ -26,22 +26,15 @@ class Cluster<T extends ClusterItem> {
         "_$count";
   }
 
-  String? _course;
-  set course(String value) {
-    _course = value;
-  }
-  String get course => _course!;
+  //String? _course;
+  String? get course => items.fold<String>("0", (p, c) => p + c.course);
 
-  String? _icon;
-  set icon(String value) {
-    _icon = value;
-  }
-  String get icon => _icon!;
+  //String? _icon;
+  String get icon => items.fold<String>("0", (p, c) => p + c.icon);
 
-  String? _rotation;
-  set rotation(String value) {
-    _rotation = value;
-  }
+  //String? _rotation;
+  String get rotation => items.fold<String>("0", (p, c) => p + c.rotation);
+
 
   @override
   String toString() {

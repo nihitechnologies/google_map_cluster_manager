@@ -42,28 +42,28 @@ class MapSampleState extends State<MapSample> {
     for (int i = 0; i < 10; i++)
       Place(
           name: 'Place $i',
-          latLng: LatLng(48.848200 + i * 0.001, 2.319124 + i * 0.001)),
+          latLng: LatLng(48.848200 + i * 0.001, 2.319124 + i * 0.001), isRotating: '', iconPath: '', courseVal: ''),
     for (int i = 0; i < 10; i++)
       Place(
           name: 'Restaurant $i',
           isClosed: i % 2 == 0,
-          latLng: LatLng(48.858265 - i * 0.001, 2.350107 + i * 0.001)),
+          latLng: LatLng(48.858265 - i * 0.001, 2.350107 + i * 0.001),isRotating: '', iconPath: '', courseVal: ''),
     for (int i = 0; i < 10; i++)
       Place(
           name: 'Bar $i',
-          latLng: LatLng(48.858265 + i * 0.01, 2.350107 - i * 0.01)),
+          latLng: LatLng(48.858265 + i * 0.01, 2.350107 - i * 0.01),isRotating: '', iconPath: '', courseVal: ''),
     for (int i = 0; i < 10; i++)
       Place(
           name: 'Hotel $i',
-          latLng: LatLng(48.858265 - i * 0.1, 2.350107 - i * 0.01)),
+          latLng: LatLng(48.858265 - i * 0.1, 2.350107 - i * 0.01),isRotating: '', iconPath: '', courseVal: ''),
     for (int i = 0; i < 10; i++)
       Place(
           name: 'Test $i',
-          latLng: LatLng(66.160507 + i * 0.1, -153.369141 + i * 0.1)),
+          latLng: LatLng(66.160507 + i * 0.1, -153.369141 + i * 0.1),isRotating: '', iconPath: '', courseVal: ''),
     for (int i = 0; i < 10; i++)
       Place(
           name: 'Test2 $i',
-          latLng: LatLng(-36.848461 + i * 1, 169.763336 + i * 1)),
+          latLng: LatLng(-36.848461 + i * 1, 169.763336 + i * 1),isRotating: '', iconPath: '', courseVal: ''),
   ];
 
   @override
@@ -103,7 +103,7 @@ class MapSampleState extends State<MapSample> {
             for (int i = 0; i < 30; i++)
               Place(
                   name: 'New Place ${DateTime.now()} $i',
-                  latLng: LatLng(48.858265 + i * 0.01, 2.350107))
+                  latLng: LatLng(48.858265 + i * 0.01, 2.350107), iconPath: '', courseVal: '', isRotating: '')
           ]);
         },
         child: Icon(Icons.update),

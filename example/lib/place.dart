@@ -5,8 +5,19 @@ class Place with ClusterItem {
   final String name;
   final bool isClosed;
   final LatLng latLng;
+  final String courseVal;
+  final String iconPath;
+  final String isRotating;
 
-  Place({required this.name, required this.latLng, this.isClosed = false});
+  Place(
+      {
+        required this.name,
+        required this.latLng,
+        this.isClosed = false,
+        required this.courseVal,
+        required this.iconPath,
+        required this.isRotating
+      });
 
   @override
   String toString() {
@@ -15,4 +26,13 @@ class Place with ClusterItem {
 
   @override
   LatLng get location => latLng;
+
+  @override
+  String get course => courseVal;
+
+  @override
+  String get icon => iconPath;
+
+  @override
+  String get rotation => isRotating;
 }
