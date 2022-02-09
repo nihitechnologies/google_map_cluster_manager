@@ -6,6 +6,7 @@ abstract class ClusterItem {
   String get course;
   String get icon;
   String get rotation;
+  String get text;
 
   String? _geohash;
   String get geohash => _geohash ??=

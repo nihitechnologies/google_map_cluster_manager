@@ -5,12 +5,11 @@ class Cluster<T extends ClusterItem> {
   final LatLng location;
   final Iterable<T> items;
 
-  Cluster(this.items)
-      : this.location = LatLng(
+  Cluster(this.items) : this.location = LatLng(
             items.fold<double>(0.0, (p, c) => p + c.location.latitude) /
                 items.length,
             items.fold<double>(0.0, (p, c) => p + c.location.longitude) /
-                items.length);
+                items.length,);
 
   /// Get number of clustered items
   int get count => items.length;
@@ -34,6 +33,8 @@ class Cluster<T extends ClusterItem> {
 
   //String? _rotation;
   String get rotation => items.fold<String>("", (p, c) => p + c.rotation);
+
+  String get text => items.fold<String>("", (p, c) => p + c.text);
 
 
   @override
