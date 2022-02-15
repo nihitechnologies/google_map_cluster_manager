@@ -36,6 +36,8 @@ class Cluster<T extends ClusterItem> {
 
   String get text => items.fold<String>("", (p, c) => p + c.text);
 
+  dynamic get device=> device;
+
 
   @override
   String toString() {

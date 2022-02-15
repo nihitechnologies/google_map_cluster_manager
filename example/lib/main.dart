@@ -103,7 +103,10 @@ class MapSampleState extends State<MapSample> {
             for (int i = 0; i < 30; i++)
               Place(
                   name: 'New Place ${DateTime.now()} $i',
-                  latLng: LatLng(48.858265 + i * 0.01, 2.350107), iconPath: '', courseVal: '', isRotating: '')
+                  latLng: LatLng(48.858265 + i * 0.01, 2.350107),
+                  iconPath: '',
+                  courseVal: '',
+                  isRotating: '')
           ]);
         },
         child: Icon(Icons.update),
