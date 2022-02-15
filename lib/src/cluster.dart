@@ -36,7 +36,7 @@ class Cluster<T extends ClusterItem> {
 
   String get text => items.fold<String>("", (p, c) => p + c.text);
 
-  String get deviceId=> items.fold<String>("", (p, c) => p + c.deviceId.toString());
+  int get deviceId=> items.fold<int>(0, (p, c) => p + c.deviceId);
 
 
   @override
