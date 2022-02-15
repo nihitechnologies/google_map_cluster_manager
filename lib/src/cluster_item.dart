@@ -7,7 +7,7 @@ abstract class ClusterItem {
   String get icon;
   String get rotation;
   String get text;
-  dynamic get device;
+  String get deviceId;
 
   String? _geohash;
   String get geohash => _geohash ??=
